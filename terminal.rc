@@ -1,0 +1,25 @@
+id ICON "src\\main\\resources\\assets\\app_icon.ico"
+
+1 VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904E4"
+    BEGIN
+      VALUE "CompanyName", "HEMsoft"
+      VALUE "FileDescription", "HEMsoft POS Terminal"
+      VALUE "FileVersion", "1.0"
+      VALUE "InternalName", "hemsoft_terminal"
+      VALUE "LegalCopyright", "HEMsoft 2024"
+      VALUE "OriginalFilename", "TerminalJX.exe"
+      VALUE "ProductName", "HEMsoft POS"
+      VALUE "ProductVersion", "1.0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1252
+  END
+END

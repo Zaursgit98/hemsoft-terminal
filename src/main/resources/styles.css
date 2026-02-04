@@ -1,0 +1,369 @@
+/* SplitPane Divider Styling */
+.split-pane>.split-pane-divider {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-background-insets: 0;
+    -fx-shape: null;
+}
+
+.split-pane {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+/* --- Top Bar --- */
+.top-bar {
+    -fx-background-color: #EEEEEE;
+    /* Grey 200 */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0, 0, 2);
+    -fx-border-color: #E0E0E0;
+    /* Grey 300 */
+    border-color: #E0E0E0;
+    -fx-border-width: 0 0 1 0;
+    border-width: 0 0 1 0;
+}
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+}
+
+.menu-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Area Buttons ScrollPane */
+.area-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.area-scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Area Buttons */
+/* Area Buttons */
+/* Area Buttons */
+.area-button {
+    -fx-background-color: white;
+    -fx-text-fill: #374151;
+    -fx-font-weight: bold;
+    -fx-font-size: 13.5px;
+    -fx-background-radius: 12;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-padding: 10 20;
+    -fx-min-width: 120px;
+    -fx-min-height: 50px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: CENTER;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 4, 0, 0, 2);
+}
+
+.area-button:hover {
+    -fx-background-color: #f9fafb;
+    /* gray-50 */
+    -fx-border-color: #d1d5db;
+    /* gray-300 */
+    border-color: #d1d5db;
+}
+
+.area-button.active {
+    -fx-background-color: white;
+    -fx-text-fill: #2196f3;
+    -fx-border-color: #2196f3;
+    -fx-border-width: 2;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.15), 6, 0, 0, 3);
+}
+
+.area-check-icon {
+    -fx-background-color: #64b5f6;
+    /* Colors.blue.shade300 */
+    -fx-min-width: 18px;
+    -fx-min-height: 18px;
+    -fx-max-width: 18px;
+    -fx-max-height: 18px;
+    -fx-shape: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z";
+    -fx-scale-shape: true;
+}
+
+.new-order-button {
+    -fx-background-color: #EF4444;
+    /* red-500 */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-radius: 12;
+    -fx-padding: 10 30;
+    -fx-min-height: 50px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
+    -fx-effect: dropshadow(gaussian, rgba(239, 68, 68, 0.3), 8, 0, 0, 4);
+}
+
+.new-order-button:hover {
+    -fx-background-color: #FF1744;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.5), 8, 0, 0, 5);
+}
+
+/* Status Icons */
+.status-container {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    /* Glassmorphism */
+    -fx-background-radius: 12;
+}
+
+.status-icon-connected {
+    -fx-text-fill: #69f0ae;
+    /* Light Green */
+    -fx-font-size: 22px;
+}
+
+.status-icon-notification {
+    -fx-text-fill: #ffa726;
+    /* Orange */
+    -fx-font-size: 24px;
+}
+
+.status-icon-menu {
+    -fx-text-fill: #616161;
+    -fx-font-size: 26px;
+}
+
+.menu-button-icon {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.menu-button-icon:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 4;
+}
+
+/* User Profile */
+/* Checks Button */
+/* Checks Button */
+.checks-button {
+    -fx-background-color: #F8F9FA;
+    -fx-text-fill: #4B5563;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-background-radius: 12;
+    -fx-padding: 10 25;
+    -fx-min-height: 50px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+}
+
+.checks-button:hover {
+    -fx-background-color: #F5F5F5;
+    /* Grey 100 */
+}
+
+/* Icon for Checks - Improved SVG */
+.icon-checks {
+    -fx-background-color: #616161;
+    /* Grey 700 */
+    -fx-min-width: 24px;
+    -fx-min-height: 24px;
+    -fx-max-width: 24px;
+    -fx-max-height: 24px;
+    /* Receipt/Bill Icon Path */
+    -fx-shape: "M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z";
+    -fx-scale-shape: true;
+}
+
+/* User/Back Button */
+/* User/Back (Admin) Button */
+.user-back-button {
+    -fx-background-color: #F8F9FA;
+    -fx-text-fill: #4B5563;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 12;
+    -fx-padding: 10 20;
+    -fx-min-height: 50px;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER;
+    -fx-border-color: #E5E7EB;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-graphic-text-gap: 12px;
+}
+
+.user-back-button:hover {
+    -fx-background-color: #F5F5F5;
+}
+
+.button-icon {
+    -fx-font-size: 18px;
+    -fx-text-fill: #374151;
+}
+
+/* --- Drawer --- */
+.drawer-pane {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 30, 0, -10, 0);
+}
+
+.drawer-header {
+    -fx-border-color: #f3f4f6;
+    border-color: #f3f4f6;
+    -fx-border-width: 0 0 1 0;
+}
+
+.drawer-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111827;
+}
+
+.drawer-icon {
+    -fx-text-fill: #4b5563;
+    -fx-font-size: 20px;
+}
+
+.drawer-scroll {
+    -fx-background: white;
+    -fx-background-color: white;
+}
+
+.drawer-section-title {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9ca3af;
+    /* gray-400 */
+    -fx-padding: 0 0 5 10;
+    -fx-text-transform: uppercase;
+}
+
+.drawer-item {
+    -fx-background-color: transparent;
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill: #374151;
+    /* gray-700 */
+    -fx-font-size: 14px;
+    -fx-padding: 12 15 12 15;
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+    -fx-graphic-text-gap: 15;
+}
+
+.drawer-item:hover {
+    -fx-background-color: #f3f4f6;
+    -fx-text-fill: #111827;
+}
+
+/* --- Map View --- */
+.map-canvas {
+    -fx-background-color: #f8fafc;
+    /* slate-50 */
+    /* grid pattern optional */
+    -fx-background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoBAMAAAB+0KVeAAAAHlBMVEUAAABkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGQAAAAdXRQAAAACnRSTlMAzMzMzMzMAAAAF0lEQVQoz2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=");
+    -fx-background-repeat: repeat;
+}
+
+.zoom-controls {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 4);
+    -fx-padding: 5;
+}
+
+.zoom-btn {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4b5563;
+    -fx-padding: 5 12 5 12;
+    -fx-cursor: hand;
+    -fx-background-radius: 4;
+}
+
+.zoom-btn:hover {
+    -fx-background-color: #f3f4f6;
+    -fx-text-fill: #111827;
+}
+
+/* --- Tables --- */
+.table-node {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 2, 4);
+    -fx-cursor: hand;
+}
+
+/* Table FREE status */
+.table-free {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: #cbd5e1;
+    border-color: #cbd5e1;
+    /* slate-300 */
+    -fx-border-width: 2;
+    -fx-border-radius: 12;
+}
+
+.table-free .table-name {
+    -fx-text-fill: #1e293b;
+    /* slate-800 */
+    -fx-font-weight: 800;
+    -fx-font-size: 14px;
+}
+
+.table-free .table-info {
+    -fx-text-fill: #94a3b8;
+    /* slate-400 */
+    -fx-font-size: 11px;
+}
+
+/* Table OCCUPIED status */
+.table-occupied {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: #2563eb;
+    border-color: #2563eb;
+    /* blue-600 */
+    -fx-border-width: 2;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(37, 99, 235, 0.25), 10, 0, 0, 5);
+}
+
+.table-occupied .table-name {
+    -fx-text-fill: #2563eb;
+    /* blue-600 */
+    -fx-font-weight: 900;
+    -fx-font-size: 14px;
+}
+
+.table-occupied .table-info {
+    -fx-text-fill: #2563eb;
+    /* blue-600 */
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.table-occupied .table-amount {
+    -fx-text-fill: #1e40af;
+    /* blue-800 */
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+/* Round Tables */
+.table-round {
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+}

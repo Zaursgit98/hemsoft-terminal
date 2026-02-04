@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Region?>
+
+<StackPane fx:id="rootStack" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../../../../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.hemsoft.terminaljx.ui.controller.MainWindowController">
+    
+    <!-- Main Layer -->
+    <BorderPane fx:id="mainLayout">
+        <!-- Top Bar -->
+        <top>
+            <fx:include fx:id="topBar" source="TopBar.fxml" />
+        </top>
+        
+        <!-- Main Content Area (Tables) -->
+        <center>
+            <StackPane fx:id="contentArea" styleClass="main-content-area">
+                <children>
+                    <Label styleClass="placeholder-text" text="Table View Loading..." />
+                </children>
+            </StackPane>
+        </center>
+    </BorderPane>
+
+    <!-- Overlay Dimmer (Visible when drawer is open) -->
+    <StackPane fx:id="overlayDimmer" onMouseClicked="#handleOverlayClick" opacity="0.0" style="-fx-background-color: rgba(0,0,0,0.4);" visible="false" />
+
+    <!-- Right Drawer Menu -->
+    <VBox fx:id="drawerPane" maxWidth="320.0" prefWidth="320.0" spacing="0.0" styleClass="drawer-pane" translateX="320.0" StackPane.alignment="CENTER_RIGHT">
+        <!-- Drawer Header -->
+        <HBox alignment="CENTER_LEFT" prefHeight="60.0" spacing="10.0" styleClass="drawer-header">
+            <padding>
+                <Insets left="20.0" right="20.0" />
+            </padding>
+            <Label styleClass="drawer-icon" text="⚙" />
+            <Label styleClass="drawer-title" text="Tənzimləmələr" HBox.hgrow="ALWAYS" />
+            <Button onAction="#handleDrawerClose" styleClass="icon-button" text="✕" />
+        </HBox>
+        
+        <!-- Drawer Content -->
+        <ScrollPane fitToWidth="true" styleClass="drawer-scroll" VBox.vgrow="ALWAYS">
+            <content>
+                <VBox spacing="10.0">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                    
+                    <!-- Section: Management -->
+                    <Label styleClass="drawer-section-title" text="İdarəetmə" />
+                    <Button maxWidth="Infinity" styleClass="drawer-item" text="İdarə Paneli" />
+                    <Button maxWidth="Infinity" styleClass="drawer-item" text="Növbə Bağla" />
+                    
+                    <Region prefHeight="10.0" />
+                    
+                    <!-- Section: Printer -->
+                    <Label styleClass="drawer-section-title" text="Printer &amp; Dizayn" />
+                    <Button maxWidth="Infinity" styleClass="drawer-item" text="Receipt Designer" />
+                    <Button maxWidth="Infinity" styleClass="drawer-item" text="Printer Tənzimləmələri" />
+                    
+                    <Region prefHeight="10.0" />
+                    
+                    <!-- Section: System -->
+                    <Label styleClass="drawer-section-title" text="Sistem" />
+                    <Button maxWidth="Infinity" styleClass="drawer-item" text="Çıxış" onAction="#handleLogout" />
+                </VBox>
+            </content>
+        </ScrollPane>
+    </VBox>
+
+</StackPane>

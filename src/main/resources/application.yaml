@@ -1,0 +1,13 @@
+database:
+  mariadb:
+    host: localhost
+    port: 3306
+    name: terminal_data
+    user: root
+    password: qiyas2001
+  sqlite:
+    name: terminal_local.db
+server:
+  enabled: true
+  port: 8080
+

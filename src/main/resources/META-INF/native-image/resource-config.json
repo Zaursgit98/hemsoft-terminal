@@ -1,0 +1,27 @@
+{
+    "resources": {
+        "includes": [
+            {
+                "pattern": ".*\\.xml$"
+            },
+            {
+                "pattern": ".*\\.fxml$"
+            },
+            {
+                "pattern": ".*\\.css$"
+            },
+            {
+                "pattern": ".*\\.properties$"
+            },
+            {
+                "pattern": ".*\\.png$"
+            },
+            {
+                "pattern": ".*\\.jpg$"
+            },
+            {
+                "pattern": ".*\\.db$"
+            }
+        ]
+    }
+}

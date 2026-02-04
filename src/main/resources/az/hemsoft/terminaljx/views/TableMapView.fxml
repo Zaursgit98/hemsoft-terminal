@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<StackPane fx:id="mapContainer" stylesheets="@../../../../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.hemsoft.terminaljx.ui.controller.TableMapController">
+    <!-- Map Canvas (Zoomable/Pannable) -->
+    <Pane fx:id="mapCanvas" styleClass="map-canvas" />
+    
+    <!-- HUD / Controls Layer -->
+    <VBox alignment="BOTTOM_RIGHT" pickOnBounds="false" spacing="10.0" StackPane.alignment="BOTTOM_RIGHT">
+        <padding>
+            <Insets bottom="20.0" right="20.0" />
+        </padding>
+        <StackPane styleClass="zoom-controls">
+            <VBox spacing="1">
+                <Label onMouseClicked="#handleZoomIn" styleClass="zoom-btn" text="+" />
+                <Label onMouseClicked="#handleZoomOut" styleClass="zoom-btn" text="-" />
+            </VBox>
+        </StackPane>
+    </VBox>
+</StackPane>
