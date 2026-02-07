@@ -1,0 +1,56 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< az.hemsoft:terminal-jx >-----------------------
+[INFO] Building terminal-fx 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ terminal-jx ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 18 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ terminal-jx ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 56 source files with javac [debug target 17 module-path] to target\classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] system modules path not set in conjunction with -source 17
+[INFO] 1 warning
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /D:/javaFX/hem-soft-terminal/src/main/java/az/hemsoft/terminaljx/business/service/BaseRepository.java:[29,15] cannot find symbol
+  symbol:   class RowMapper
+  location: class az.hemsoft.terminaljx.business.service.BaseRepository<T,ID>
+[ERROR] /D:/javaFX/hem-soft-terminal/src/main/java/az/hemsoft/terminaljx/business/service/BaseRepository.java:[112,38] cannot find symbol
+  symbol:   class RowMapper
+  location: class az.hemsoft.terminaljx.business.service.BaseRepository<T,ID>
+[ERROR] /D:/javaFX/hem-soft-terminal/src/main/java/az/hemsoft/terminaljx/business/service/BaseRepository.java:[133,38] cannot find symbol
+  symbol:   class RowMapper
+  location: class az.hemsoft.terminaljx.business.service.BaseRepository<T,ID>
+[INFO] 3 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.626 s
+[INFO] Finished at: 2026-02-07T04:06:20+04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile (default-compile) on project terminal-jx: Compilation failure: Compilation failure: 
+[ERROR] /D:/javaFX/hem-soft-terminal/src/main/java/az/hemsoft/terminaljx/business/service/BaseRepository.java:[29,15] cannot find symbol
+[ERROR]   symbol:   class RowMapper
+[ERROR]   location: class az.hemsoft.terminaljx.business.service.BaseRepository<T,ID>
+[ERROR] /D:/javaFX/hem-soft-terminal/src/main/java/az/hemsoft/terminaljx/business/service/BaseRepository.java:[112,38] cannot find symbol
+[ERROR]   symbol:   class RowMapper
+[ERROR]   location: class az.hemsoft.terminaljx.business.service.BaseRepository<T,ID>
+[ERROR] /D:/javaFX/hem-soft-terminal/src/main/java/az/hemsoft/terminaljx/business/service/BaseRepository.java:[133,38] cannot find symbol
+[ERROR]   symbol:   class RowMapper
+[ERROR]   location: class az.hemsoft.terminaljx.business.service.BaseRepository<T,ID>
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

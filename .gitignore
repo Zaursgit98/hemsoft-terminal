@@ -1,0 +1,15 @@
+target/
+lib/
+libs/
+bin/
+*.zip
+*.rar
+*.exe
+*.class
+.mvn/
+mvnw
+mvnw.cmd
+.idea/
+.vscode/
+*.iml
+*.log
