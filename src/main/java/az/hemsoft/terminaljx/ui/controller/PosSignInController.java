@@ -1,8 +1,8 @@
 package az.hemsoft.terminaljx.ui.controller;
 
-import az.hemsoft.terminaljx.business.restaurant.service.UserService;
-import az.hemsoft.terminaljx.business.restaurant.service.DateValidationService;
-import az.hemsoft.terminaljx.business.restaurant.service.LogoService;
+import az.hemsoft.terminaljx.business.user.UserService;
+import az.hemsoft.terminaljx.business.core.service.DateValidationService;
+import az.hemsoft.terminaljx.config.LogoService;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;

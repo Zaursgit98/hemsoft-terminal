@@ -7,7 +7,3 @@ database:
     password: qiyas2001
   sqlite:
     name: terminal_local.db
-server:
-  enabled: true
-  port: 8080
-

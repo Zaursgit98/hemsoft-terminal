@@ -14,12 +14,12 @@ def replace_in_file(filepath):
         elif 'src\\main\\java\\az\\hemsoft\\terminaljx\\business\\service' in filepath.replace('/', '\\'):
             content = content.replace('package az.hemsoft.terminaljx.service;', 'package az.hemsoft.terminaljx.business.restaurant.service;')
         elif 'src\\main\\java\\az\\hemsoft\\terminaljx\\business\\api' in filepath.replace('/', '\\'):
-            content = content.replace('package az.hemsoft.terminaljx.api;', 'package az.hemsoft.terminaljx.business.restaurant.api;')
+            content = content.replace('package az.hemsoft.terminaljx.config;', 'package az.hemsoft.terminaljx.business.restaurant.api;')
 
         # 2. Update Import Statements (Global)
         content = content.replace('import az.hemsoft.terminaljx.model.', 'import az.hemsoft.terminaljx.business.restaurant.model.')
         content = content.replace('import az.hemsoft.terminaljx.service.', 'import az.hemsoft.terminaljx.business.restaurant.service.')
-        content = content.replace('import az.hemsoft.terminaljx.api.', 'import az.hemsoft.terminaljx.business.restaurant.api.')
+        content = content.replace('import az.hemsoft.terminaljx.config.', 'import az.hemsoft.terminaljx.business.restaurant.api.')
 
         # 3. Update FXML references (if any exist as strings)
         content = content.replace('az.hemsoft.terminaljx.model.', 'az.hemsoft.terminaljx.business.restaurant.model.')

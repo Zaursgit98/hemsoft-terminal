@@ -1,10 +1,10 @@
 package az.hemsoft.terminaljx;
 
 import az.hemsoft.terminaljx.ui.controller.PosSignInController;
-import az.hemsoft.terminaljx.business.restaurant.service.ConfigService;
-import az.hemsoft.terminaljx.business.restaurant.service.ServerService;
-import az.hemsoft.terminaljx.business.restaurant.service.ClientService;
-import az.hemsoft.terminaljx.business.restaurant.service.TrayService;
+import az.hemsoft.terminaljx.config.ConfigService;
+import az.hemsoft.terminaljx.config.ServerService;
+import az.hemsoft.terminaljx.config.ClientService;
+import az.hemsoft.terminaljx.config.TrayService;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
@@ -32,16 +32,13 @@ public class MainApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
         this.mainStage = primaryStage;
 
-        // Register UI callback in ServerService so external triggers can show UI
-        ServerService.getInstance().setShowUICallback(this::showUI);
-
         // Setup tray immediately
         TrayService.getInstance().setupTray("HEMsoft Terminal", () -> {
             Platform.runLater(this::showUI);
         });
 
         if (startHidden) {
-            System.out.println("\uD83E\uDD22 Starting hidden in System Tray...");
+            System.out.println("🧟 Starting hidden in System Tray...");
             Platform.setImplicitExit(false);
         } else {
             showUI();
@@ -93,16 +90,13 @@ public class MainApplication extends Application {
             mainStage.setFullScreen(true);
             mainStage.setFullScreenExitHint("");
 
-            // Detection of Alt+F4 is now handled by the default close request (minimizes to
-            // tray)
-
             // Minimize/Hide to tray instead of exit when closing
             mainStage.setOnCloseRequest(event -> {
                 event.consume();
                 mainStage.hide();
                 TrayService.getInstance().showMessage(
                         "HEMsoft POS",
-                        "Proqram arxa fonda i\u015Fl\u0259m\u0259y\u0259 davam edir (System Tray).",
+                        "Proqram arxa fonda işləməyə davam edir (System Tray).",
                         java.awt.TrayIcon.MessageType.NONE);
             });
 
@@ -113,9 +107,9 @@ public class MainApplication extends Application {
             System.err.println("❌ UI Error: " + e.getMessage());
             e.printStackTrace();
             // Show simple error if UI fails
-            Label errorLabel = new Label("X\u0259ta: " + e.getMessage());
+            Label errorLabel = new Label("Xəta: " + e.getMessage());
             mainStage.setScene(new Scene(errorLabel, 400, 200));
-            mainStage.setTitle("X\u0259ta");
+            mainStage.setTitle("Xəta");
         }
     }
 
@@ -126,33 +120,14 @@ public class MainApplication extends Application {
 
         ConfigService configService = ConfigService.getInstance();
 
-        // WhatsApp-like: Check if app already running
-        if (checkInstanceAlive(configService.getServerPort())) {
-            System.out.println("\u26A0\uFE0F App already running. Signaling to show UI...");
-            System.exit(0);
-        }
-
         if (configService.isServerMode()) {
             ServerService.getInstance().startServer();
         } else {
             ClientService.getInstance().startClient("localhost", configService.getServerPort(), (event, data) -> {
-                System.out.println("\uD83D\uDCE9 Client event: " + event);
+                System.out.println("📩 Client event: " + event);
             });
         }
 
         launch(args);
-    }
-
-    private static boolean checkInstanceAlive(int port) {
-        try {
-            java.net.URL url = new java.net.URL("http://localhost:" + port + "/api/control/show-ui");
-            java.net.HttpURLConnection conn = (java.net.HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("POST");
-            conn.setConnectTimeout(1000);
-            int code = conn.getResponseCode();
-            return code == 200;
-        } catch (Exception e) {
-            return false;
-        }
     }
 }
