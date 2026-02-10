@@ -4,6 +4,6 @@ database:
     port: 3306
     name: terminal_data
     user: root
-    password: qiyas2001
+    password: zaur1998
   sqlite:
     name: terminal_local.db

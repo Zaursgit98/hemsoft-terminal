@@ -4,6 +4,7 @@ import az.hemsoft.terminaljx.business.core.annotation.*;
 import az.hemsoft.terminaljx.business.warehouse.model.Product;
 import az.hemsoft.terminaljx.business.warehouse.model.ProductGroup;
 import az.hemsoft.terminaljx.business.warehouse.service.ProductService;
+
 import java.util.List;
 
 @RestController("/api")
@@ -29,7 +30,7 @@ public class ProductController {
     @PutMapping("/products/{id}")
     public Product updateProduct(@PathVariable("id") Integer id, @RequestBody Product product) {
         product.setId(id);
-        service.updateProduct(product);
+        service.updateProduct(id, product);
         return product;
     }
 
@@ -57,7 +58,7 @@ public class ProductController {
     @PutMapping("/product-groups/{id}")
     public ProductGroup updateGroup(@PathVariable("id") Integer id, @RequestBody ProductGroup group) {
         group.setId(id);
-        service.updateGroup(group);
+        service.updateGroup(id, group);
         return group;
     }
 

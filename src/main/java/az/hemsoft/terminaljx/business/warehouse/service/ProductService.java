@@ -5,7 +5,9 @@ import az.hemsoft.terminaljx.business.warehouse.model.Product;
 import az.hemsoft.terminaljx.business.warehouse.model.ProductGroup;
 import az.hemsoft.terminaljx.business.warehouse.repository.ProductGroupRepository;
 import az.hemsoft.terminaljx.business.warehouse.repository.ProductRepository;
+
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductService {
@@ -30,8 +32,16 @@ public class ProductService {
         return productRepo.save(product);
     }
 
-    public void updateProduct(Product product) {
-        productRepo.update(product);
+    public Product updateProduct(Integer id, Product productDetail) {
+        Product product = productRepo.findById(id).get();
+        product.setName(productDetail.getName());
+        product.setPrice(productDetail.getPrice());
+        product.setMeasurement(productDetail.getMeasurement());
+        product.setCode(productDetail.getCode());
+        product.setActive(productDetail.getActive());
+        product.setGroup(product.getGroup());
+
+        return productRepo.save(product);
     }
 
     public void deleteProduct(Integer id) {
@@ -51,8 +61,14 @@ public class ProductService {
         return groupRepo.save(group);
     }
 
-    public void updateGroup(ProductGroup group) {
-        groupRepo.update(group);
+    public ProductGroup updateGroup(Integer id, ProductGroup group) {
+        ProductGroup productGroup = groupRepo.findById(id).get();
+        productGroup.setName(group.getName());
+        productGroup.setDescription(group.getDescription());
+        productGroup.setActive(productGroup.getActive());
+        productGroup.setProducts(productGroup.getProducts());
+        return groupRepo.save(productGroup);
+
     }
 
     public void deleteGroup(Integer id) {

@@ -5,15 +5,15 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
+
+
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@Table("warehouses")
 public class Warehouse {
     @Id
     @Column(name = "id")

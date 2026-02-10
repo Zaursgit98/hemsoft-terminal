@@ -18,6 +18,12 @@ module az.hemsoft.terminaljx {
     requires transitive io.javalin;
     requires org.slf4j;
     requires com.fasterxml.jackson.databind;
+    requires net.bytebuddy;
+    requires jdk.jdi;
+    requires com.sun.jna.platform;
+    requires jakarta.persistence;
+    requires org.checkerframework.checker.qual;
+    requires annotations;
 
     opens az.hemsoft.terminaljx to javafx.fxml;
     opens az.hemsoft.terminaljx.ui.controller to javafx.fxml;

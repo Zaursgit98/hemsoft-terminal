@@ -1,6 +1,7 @@
 package az.hemsoft.terminaljx.business.warehouse.model;
 
 import az.hemsoft.terminaljx.business.core.annotation.*;
+import az.hemsoft.terminaljx.business.core.annotation.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,12 +9,14 @@ import lombok.NoArgsConstructor;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import java.util.List;
 
+
+
+@Table(name = "product_group",schema = "warehouse")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@Table("product_groups")
 public class ProductGroup {
     @Id
     @Column(name = "id")

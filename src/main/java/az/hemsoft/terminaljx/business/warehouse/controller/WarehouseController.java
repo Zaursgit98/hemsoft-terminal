@@ -21,6 +21,7 @@ public class WarehouseController {
 
     @PostMapping
     public Warehouse create(@RequestBody Warehouse warehouse) {
+
         return service.create(warehouse);
     }
 

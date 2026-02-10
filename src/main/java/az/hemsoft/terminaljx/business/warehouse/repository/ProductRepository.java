@@ -6,4 +6,5 @@ import az.hemsoft.terminaljx.business.warehouse.model.Product;
 
 @Repository
 public class ProductRepository extends BaseRepository<Product, Integer> {
+
 }

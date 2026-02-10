@@ -139,7 +139,7 @@ public class SchemaGenerator {
             }
         }
     }
-
+        //bax qaqa burda edirem.
     private static void updateTable(Connection connection, Class<?> clazz, String tableName) throws SQLException {
         Set<String> existingColumns = getExistingColumns(connection, tableName);
         Set<String> uniqueColumns = getUniqueColumns(connection, tableName);
